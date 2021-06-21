@@ -23,5 +23,9 @@
             "scopeName": "source.noc",
             "path": "./syntaxes/noc.tmLanguage.json"
         }]
+    },
+    "repository": {
+      "type":"git",
+      "url": "https://github.com/noc-lang/vscode-noc.git"
     }
 }
