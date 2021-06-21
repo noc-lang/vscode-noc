@@ -1,0 +1,98 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Noc",
+	"patterns": [
+		{
+			"include":"#function"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#simple-quote-string"
+		},
+		{
+			"include": "#multine-comments"
+		},
+		{
+			"include":"#docstring-comment"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#booleans"	
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#simple-comments"
+		}
+	],
+	"repository": {
+		"function": {
+			"begin":"def ",
+			"name": "keyword.control.noc",
+			"end":" =",
+			"contentName":"entity.name.function.noc"
+		},
+		"keywords": {
+			"name": "keyword.control.noc",
+			"match": "load"
+		},
+		"strings": {
+			"name": "string.quoted.double.noc",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.noc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"simple-quote-string": {
+			"name": "string.quoted.single.noc",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.noc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"multine-comments": {
+			"name":"comment.block.noc",
+			"begin":"(\\/\\*)",
+			"end":"(\\*\\/)"
+		},
+		"docstring-comment": {
+			"name":"comment.block.documentation.noc",
+			"begin":"---",
+			"end":"---"
+		},
+		"numbers":{
+			"name":"constant.numeric.noc",
+			"match":"[0-9]+"
+		},
+		"booleans":{
+			"name":"constant.language.noc",
+			"match":"(True|False)+"
+		},
+		"operators": {
+			"name":"keyword.other.unit.noc",
+			"match": "(=|\\+|-|\\*|/)+"
+		},
+		"simple-comments": {
+			"name":"comment.block.noc",
+			"begin":"#",
+			"end":"\n"
+		}
+	},
+	"scopeName": "source.noc"
+}
