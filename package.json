@@ -1,6 +1,7 @@
 {
     "name": "noc",
     "displayName": "Noc",
+    "publisher":"mortim",
     "description": "Highlighting support for the Noc language.",
     "version": "0.0.1",
     "engines": {
