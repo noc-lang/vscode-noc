@@ -2,36 +2,17 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Noc",
 	"patterns": [
-		{
-			"include":"#function"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#simple-quote-string"
-		},
-		{
-			"include": "#multine-comments"
-		},
-		{
-			"include":"#docstring-comment"
-		},
-		{
-			"include": "#numbers"
-		},
-		{
-			"include": "#booleans"	
-		},
-		{
-			"include": "#operators"
-		},
-		{
-			"include": "#simple-comments"
-		}
+		{"include":"#function"},
+		{"include": "#keywords"},
+		
+		{"include": "#strings"},
+		{"include": "#simple-quote-string"},
+
+		{"include": "#multine-comments"},
+		{"include": "#simple-comments"},
+		{"include":"#docstring-comment"},
+
+		{"include": "#literals"}
 	],
 	"repository": {
 		"function": {
@@ -44,20 +25,14 @@
 			"name": "keyword.control.noc",
 			"match": "load"
 		},
+
 		"strings": {
 			"name": "string.quoted.double.noc",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.noc",
-					"match": "\\\\."
-				}
-			]
+			"match":"\"[^\"]+\""
 		},
 		"simple-quote-string": {
 			"name": "string.quoted.single.noc",
-			"begin": "'",
+			"begin": " '",
 			"end": "'",
 			"patterns": [
 				{
@@ -66,6 +41,7 @@
 				}
 			]
 		},
+		
 		"multine-comments": {
 			"name":"comment.block.noc",
 			"begin":"(\\/\\*)",
@@ -75,6 +51,25 @@
 			"name":"comment.block.documentation.noc",
 			"begin":"---",
 			"end":"---"
+		},
+		"simple-comments": {
+			"name":"comment.block.noc",
+			"begin":"#",
+			"end":"\n"
+		},
+
+		"literals": {
+			"patterns": [
+				{
+					"include": "#numbers"
+				},
+				{
+					"include": "#booleans"
+				},
+				{
+					"include": "#operators"
+				}
+			]
 		},
 		"numbers":{
 			"name":"constant.numeric.noc",
@@ -87,11 +82,6 @@
 		"operators": {
 			"name":"keyword.other.unit.noc",
 			"match": "(=|\\+|-|\\*|/)+"
-		},
-		"simple-comments": {
-			"name":"comment.block.noc",
-			"begin":"#",
-			"end":"\n"
 		}
 	},
 	"scopeName": "source.noc"
