@@ -3,7 +3,7 @@
     "displayName": "Noc",
     "publisher":"mortim",
     "description": "Highlighting support for the Noc language.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.57.0"
     },

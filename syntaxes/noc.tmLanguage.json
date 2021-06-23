@@ -6,7 +6,6 @@
 		{"include": "#keywords"},
 		
 		{"include": "#strings"},
-		{"include": "#simple-quote-string"},
 
 		{"include": "#multine-comments"},
 		{"include": "#simple-comments"},
@@ -28,15 +27,11 @@
 
 		"strings": {
 			"name": "string.quoted.double.noc",
-			"match":"\"[^\"]+\""
-		},
-		"simple-quote-string": {
-			"name": "string.quoted.single.noc",
-			"begin": " '",
-			"end": "'",
+			"begin":"\"",
+			"end":"\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.noc",
+					"name": "constant.character.escape.",
 					"match": "\\\\."
 				}
 			]
