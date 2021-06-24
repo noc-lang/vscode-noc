@@ -4,7 +4,6 @@
 	"patterns": [
 		{"include":"#function"},
 		{"include": "#keywords"},
-		
 		{"include": "#strings"},
 
 		{"include": "#multine-comments"},
@@ -15,16 +14,20 @@
 	],
 	"repository": {
 		"function": {
-			"begin":"def ",
-			"name": "keyword.control.noc",
-			"end":" =",
-			"contentName":"entity.name.function.noc"
+			"begin":"(def)",
+			"beginCaptures": {
+				"1":{"name":"keyword.control.noc"}
+			},
+			"end":"([a-zA-Z0-9'_]+) (=)",
+			"endCaptures": {
+				"1":{"name":"entity.name.function.noc"},
+				"2":{"name":"keyword.other.unit.noc"}
+			}
 		},
 		"keywords": {
 			"name": "keyword.control.noc",
 			"match": "load"
 		},
-
 		"strings": {
 			"name": "string.quoted.double.noc",
 			"begin":"\"",
@@ -36,7 +39,7 @@
 				}
 			]
 		},
-		
+
 		"multine-comments": {
 			"name":"comment.block.noc",
 			"begin":"(\\/\\*)",
@@ -68,15 +71,15 @@
 		},
 		"numbers":{
 			"name":"constant.numeric.noc",
-			"match":"[0-9]+"
+			"match":"\\b([0-9]+)\\b"
 		},
 		"booleans":{
 			"name":"constant.language.noc",
-			"match":"(True|False)+"
+			"match":"\\b(True|False)\\b"
 		},
 		"operators": {
 			"name":"keyword.other.unit.noc",
-			"match": "(=|\\+|-|\\*|/)+"
+			"match": "(\\+|-|\\*|/)"
 		}
 	},
 	"scopeName": "source.noc"
