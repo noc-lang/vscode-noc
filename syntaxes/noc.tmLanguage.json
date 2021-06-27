@@ -14,13 +14,13 @@
 	],
 	"repository": {
 		"function": {
-			"begin":"(def)",
+			"begin":"(def) ( +)?([a-zA-Z0-9'_]+)",
 			"beginCaptures": {
-				"1":{"name":"keyword.control.noc"}
+				"1":{"name":"keyword.control.noc"},
+				"3":{"name":"entity.name.function.noc"}
 			},
-			"end":"([a-zA-Z0-9'_]+) (=)",
+			"end":"([ \\n]+)?(=)",
 			"endCaptures": {
-				"1":{"name":"entity.name.function.noc"},
 				"2":{"name":"keyword.other.unit.noc"}
 			}
 		},
