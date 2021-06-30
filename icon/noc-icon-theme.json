@@ -1,5 +1,5 @@
 {
-    "fonts": [{
+	"fonts": [{
 		"id": "noc",
 		"src": [{
 			"path": "./noc.woff",
