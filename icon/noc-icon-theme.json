@@ -1,29 +1,25 @@
 {
-	"fonts": [
-		{
-			"id": "noc",
-			"src": [
-				{
-					"path": "./noc.woff",
-					"format": "woff"
-				}
-			],
-			"weight": "normal",
-			"style": "normal",
-			"size": "100%"
-		}
-	],
+    "fonts": [{
+		"id": "noc",
+		"src": [{
+			"path": "./noc.woff",
+			"format": "woff"
+		}],
+		"weight": "normal",
+		"style": "normal",
+		"size": "100%"
+	}],
+
 	"iconDefinitions": {
 		"_noc": {
 			"fontCharacter": "\\E900",
 			"fontColor": "#6fa0bb"
 		}
 	},
+
 	"file": "_default",
-	"fileExtensions": {
-		"noc":"_noc"
-	},
-	"languageIds": {
-		"noc":"_noc"
-	},
+
+	"fileExtensions": {"noc":"_noc"},
+	
+	"languageIds": {"noc":"_noc"}
 }
