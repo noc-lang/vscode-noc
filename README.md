@@ -2,7 +2,7 @@
 
 [![](https://vsmarketplacebadge.apphb.com/version/mortim.noc.svg)](https://marketplace.visualstudio.com/items?itemName=mortim.noc) [![](https://vsmarketplacebadge.apphb.com/installs/mortim.noc.svg)](https://marketplace.visualstudio.com/items?itemName=mortim.noc)
 
-A VSCode extension of a highlighting support for the Noc language.
+Noc language support for Visual Studio Code
 
 Features:
 - Syntax Highlighting
