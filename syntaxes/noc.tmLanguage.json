@@ -2,9 +2,10 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Noc",
 	"patterns": [
-		{"include":"#function"},
 		{"include": "#keywords"},
-		{"include": "#strings"},
+		{"include":"#function"},
+		{"include": "#double-quote-strings"},
+		{"include": "#simple-quote-strings"},
 
 		{"include": "#multine-comments"},
 		{"include": "#simple-comments"},
@@ -13,33 +14,37 @@
 		{"include": "#literals"}
 	],
 	"repository": {
+		"keywords": {
+			"name": "keyword.control.noc",
+			"match": "load"
+		},
+
 		"function": {
-			"begin":"(def) ( +)?([a-zA-Z0-9'_]+)",
+			"begin":"(def)",
 			"beginCaptures": {
-				"1":{"name":"keyword.control.noc"},
-				"3":{"name":"entity.name.function.noc"}
+				"1":{"name":"keyword.control.noc"}
 			},
+			"contentName":"entity.name.function.noc",
 			"end":"([ \\n]+)?(=)",
 			"endCaptures": {
 				"2":{"name":"keyword.other.unit.noc"}
 			}
 		},
-		"keywords": {
-			"name": "keyword.control.noc",
-			"match": "load"
-		},
-		"strings": {
+		"double-quote-strings": {
 			"name": "string.quoted.double.noc",
 			"begin":"\"",
 			"end":"\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.",
+					"name": "constant.character.escape.noc",
 					"match": "\\\\."
 				}
 			]
 		},
-
+		"simple-quote-strings": {
+			"name": "string.quoted.single.noc",
+			"match":"\\'(?:[^'\\\\]|\\\\.)\\'"
+		},
 		"multine-comments": {
 			"name":"comment.block.noc",
 			"begin":"(\\/\\*)",
