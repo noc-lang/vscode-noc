@@ -24,9 +24,9 @@
 			"beginCaptures": {
 				"1":{"name":"keyword.control.noc"}
 			},
-			"end":"\\(?([^()]*)\\)?[ ]*(=)",
+			"contentName":"entity.name.function.noc",
+			"end":"([ \\n]+)?(=)",
 			"endCaptures": {
-				"1":{"name":"entity.name.function.noc"},
 				"2":{"name":"keyword.other.unit.noc"}
 			}
 		},
@@ -84,7 +84,7 @@
 		},
 		"operators": {
 			"name":"keyword.other.unit.noc",
-			"match": "(\\+|-|\\*|/|\\^|\\>|=|\\<)"
+			"match": "(\\+|-|\\*|/)"
 		}
 	},
 	"scopeName": "source.noc"
