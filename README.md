@@ -1,6 +1,6 @@
 # Noc for Visual Studio Code
 
-[![](https://vsmarketplacebadge.apphb.com/version/mortim.noc.svg)](https://marketplace.visualstudio.com/items?itemName=mortim.noc) [![](https://vsmarketplacebadge.apphb.com/installs/mortim.noc.svg)](https://marketplace.visualstudio.com/items?itemName=mortim.noc)
+[![](https://vsmarketplacebadge.apphb.com/version/mortim.noc-lang.svg)](https://marketplace.visualstudio.com/items?itemName=mortim.noc-lang) [![](https://vsmarketplacebadge.apphb.com/installs/mortim.noc-lang.svg)](https://marketplace.visualstudio.com/items?itemName=mortim.noc-lang)
 
 Noc language support for Visual Studio Code
 
