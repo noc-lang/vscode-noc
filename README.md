@@ -9,4 +9,4 @@ Features:
 ![example](assets/example.png)
 
 ### Contributions
-If you have some problems with this extension, you can report this in [creating an issue](https://github.com/mortim/vscode-noc/issues)
+If you have some problems with this extension, you can report this in [creating an issue](https://github.com/noc-lang/vscode-noc/issues)
